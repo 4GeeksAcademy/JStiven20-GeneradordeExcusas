@@ -1,11 +1,13 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let quien = ['The dog', 'My grandma', 'The mailman', 'My bird'];
+let accion = ['ate', 'peed', 'crushed', 'broke'];
+let que = ['my homework', 'my phone', 'the car'];
+let cuando = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+let Excusas = `${quien[getRandomIndex(quien)]} ${accion[getRandomIndex(accion)]} ${que[getRandomIndex(que)]} ${cuando[getRandomIndex(cuando)]}`;
+
+
+document.getElementById ('Excusas').innerHTML = Excusas;
